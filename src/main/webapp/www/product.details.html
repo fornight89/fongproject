@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport"
+ content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/font.css" />
+<link rel="stylesheet" type="text/css" href="css/product.css" />
+ <script type="text/javascript" src="cordova.js"></script>
+ <script type="text/javascript" src="js/index.js"></script>
+ <script type="text/javascript" src="js/angular.min.js"></script>
+ <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+ <script type="text/javascript" src="js/jquery.knob.js"></script>
+ <script type="text/javascript" src="js/angularJs/productList/productprofile.controller.js"></script>
+<meta name="msapplication-tap-highlight" content="no" />
+<title>Hello World</title>
+</head>
+<body>
+ <div ng-app="ProductProfileApp" ng-controller="ProductProfileCtrl" >
+    <div class="background-image"></div>
+    <div class="content ">
+    	
+    	<div id="shopLogo" class="circleBase type1  middleDiv shopLogo hideIt"></div>
+		<div id="shopName" class="middleDiv shopName hideIt" >StarBucks</div>
+		
+    
+    	<div>
+			<div id="logoShop" class="circleBase type1 middleDiv topDiv2 " ng-class="class"></div>
+		</div>
+		
+		<div id="progressBar" class="middleDiv topDiv progressBarHide" >
+        	<input type="text" data-width="500"  data-height="500" data-angleOffset=-125 data-angleArc=250 data-thickness=".2"	data-linecap=round data-fgColor="#222222" class="dial">
+    	</div>
+    	<script>
+    		$(".dial").knob();
+		</script>
+		
+		
+		<div class="middleDiv slogun">
+			<p align="center" style="font-size:20px"><b>Thank you coming.</b></p>
+			<p>The best coffee for you the best <a style="color:green"><b>You.</b></a></p>
+		</div>
+		
+		<div id="info" class="middleDiv infoDiv">
+			<div class="leftrightDiv" align="center"><p>Now :</p><p>327</p></div>
+			<div class="centerDiv" align="center"><p>Requested : </p><p> 375</p></div>
+		</div>
+		
+		
+		<div class="input-group middleDiv">
+  				<input type="button" class="clsBtnLogin" ng-style="myvar === 0 && {'background-color': 'white', 'color': 'black'} || myvar === 1 && {'background-color': 'black', 'color': 'white'}" value={{btnValue}}  ng-click="join()" />
+		</div>
+	
+	</div>
+
+ </div>
+</body>
+</html>

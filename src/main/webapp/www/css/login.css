@@ -1,0 +1,139 @@
+
+
+.background-image{
+
+  z-index: 9998;
+  background-color: black;
+  background-image: url(../img/loginbg.png);
+  background-size:cover;
+  background-position: center; 
+  display: block;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width:100%;
+  height:100%;
+  
+
+  
+}
+
+.content {
+  position: relative;
+  z-index: 9999;
+
+}
+
+.logo{
+  display: block;
+  background-image: url(../img/iconlogo.png);
+  width: 320px;
+  height: 320px;
+  margin-top:10%;
+}
+
+ .middleDiv{
+ 	position:absolute;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	width:400px; 
+ }
+
+.brand{
+	text-shadow: 0px 0px 30px rgba(0, 255, 0, 1);
+	font-size:40px;
+	color:white;
+	font-family:'raleway';
+	letter-spacing: 20px;
+}
+
+input.transparent-input{
+    border:none !important;
+    background-color: rgba(0, 0, 0, 0);
+    padding:0px 0px 0px 20px;
+    letter-spacing: 10px;
+ }
+ 
+ /*@Overide bootstrap*/
+ .input-group{
+ 	letter-spacing: 10px;
+ 	border: none;
+ 	height:60px;
+ 	font-size:25px;
+ 	color:white; !important;
+ 	background-color: rgba(230, 230, 230, 0.5);
+ 	font-family: 'orbiton';
+ 	width:90%;
+ }
+ 
+ .glyphicon{
+ 	padding:20px 0px 0px 20px;
+ }
+ 
+ .clsBtnLogin{
+ 	font-family: 'orbiton';
+ 	height:60px;
+ 	width:100%;
+ 	color:rgba(48, 65, 79, 1);
+ 	background-color:white;
+ 	border:none;
+ }
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /*------------------CHANGE PLACE HOLDER COLOR */
+ ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #FFFFFF;
+    letter-spacing: 10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding-left:20px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #FFFFFF;
+   opacity:  1;
+   letter-spacing: 10px;
+   margin-top:10px;
+   margin-bottom:10px;
+   padding-left:20px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #FFFFFF;
+   opacity:  1;
+   letter-spacing: 10px;
+   margin-top:10px;
+   margin-bottom:10px;
+   padding-left:20px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #FFFFFF;
+   letter-spacing: 10px;
+   margin-top:10px;
+   margin-bottom:10px;
+   padding-left:20px;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #FFFFFF;
+  letter-spacing: 10px;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding-left:20px;
+}
+
+

@@ -1,0 +1,43 @@
+		<!--  css  -->
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		
+		
+		
+
+		<div class="background-image"></div>
+        
+        <div class="content ">
+        	<div class="logo center-block"></div>
+        	<div class="middleDiv" ><span class="brand ">TWINKLEXSH</span></div>
+        	
+            <div class="input-group center-block" style="margin-top:30%">
+  				<span class="glyphicon glyphicon-user"></span>
+  				<input type="text" ng-model="account.username" class="transparent-input" placeholder="USERNAME" >
+  				
+			</div>
+        
+        	<div class="input-group center-block" style="margin-top:5%">
+  				<span class="glyphicon glyphicon-lock"></span>
+  				<input type="password" ng-model="account.userPassword" class="transparent-input" placeholder="PASSWORD" >
+			</div>
+			
+        	<div class="input-group center-block" style="margin-top:5%">
+  				<span class="glyphicon glyphicon-phone"></span>
+  				<input type="text" ng-model="account.phoneNumber" class="transparent-input" placeholder="PHONE NUMBER" >
+			</div>
+			
+			<div class="input-group center-block" style="margin-top:10%">
+  				<input ng-click="create()" type="button" class="clsBtnLogin" value="CREATE" >
+			</div>
+			
+			<div class="input-group center-block" style="margin-top:3%;background-color:rgba(0, 0, 0, 0);">
+  				<input ng-click="back()" type="button" class="clsBtnLogin" style="color:white;background-color:rgba(0, 0, 0, 0);" value="BACK" >
+			</div>
+			
+			<div ng-show="error.showme" class="input-group center-block" style="margin-top:3%;background-color:rgba(0, 0, 0, 0);">
+  				<input ng-click="back()" type="button" class="clsBtnLogin" style="color:red;background-color:rgba(0, 0, 0, 0);" value="{{error.msg}}" >
+			</div>
+			
+
+
+		</div>

@@ -1,0 +1,79 @@
+.zipper.ng-animate {
+  transition:0.5s linear all;
+}
+
+.zipper.ng-enter {
+  animation: in_animate 0.5s linear;
+  -webkit-animation: in_animate 0.5s linear;
+}
+
+.zipper.ng-leave {
+  animation: out_animate 0.5s linear;
+  -webkit-animation: out_animate 0.5s linear;
+}
+
+
+
+/*--------------------------------------------------- in_animate ---------------*/
+
+
+@keyframes in_animate{
+  0% { opacity:1; }
+  100% { opacity:0; }
+}
+
+@-webkit-keyframes in_animate {
+  0% { opacity:1; }
+  100% { opacity:0; }
+}
+
+/*--------------------------------------------------- out_animate ---------------*/
+
+@keyframes out_animate {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes out_animate {
+  0% { opacity:0; }
+   { opacity:1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+.zipper.ng-enter {
+  opacity:0;
+}
+
+.zipper.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.zipper.ng-leave {
+  opacity:1;
+}
+
+.zipper.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+*/

@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport"
+ content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/font.css" />
+<link rel="stylesheet" type="text/css" href="css/example.css" />
+<meta name="msapplication-tap-highlight" content="no" />
+<TITLE>Crunchify - jQuery Knob Example</TITLE>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/jquery.knob.js"></script>
+<script>
+ 
+function knobfunction(value1){
+	$('.dial')
+    .val(value1)
+    .trigger('change');
+}
+
+var randomnumber = 0;
+	
+	$(document).ready(function(){
+	    $("button").click(function(){
+	        //$("#square").removeClass("square");
+	        $("#square").addClass("square");
+	    });
+	});
+	
+	
+    $(document).ready(
+    function() {
+      setInterval(function() {
+      //var randomnumber = Math.round(Math.random() * 100);
+      randomnumber = randomnumber + 1;
+      knobfunction(randomnumber);
+     }, 20);
+    });
+    
+    
+    
+    
+</script>
+ 
+</HEAD>
+<BODY>
+
+    <div id="show" align="center"></div>
+    <div align="center">
+        <input type="text" class="dial">
+    </div>
+    
+    <div id="square" class=""></div>
+    
+    <button>Remove the "intro" class from all p elements</button>
+    
+    <script>
+    	$(".dial").knob();
+	</script>
+ 
+</BODY>
+</HTML>

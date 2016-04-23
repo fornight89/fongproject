@@ -1,0 +1,31 @@
+		<!--  css  -->
+   		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		
+		<div class="background-image"></div>
+		<div class="content " >
+        <div class="product"  ng-click="redic(product.restaurantName, product.id)" ng-repeat="product in formData.products">
+        	<div class="bgImg" back-img="{{product.image}}" ></div>
+        	<div class="circleBase type1 itemImg" item-img="{{product.imageItem}}" ></div>
+        	<div class="itemInfo">
+        		<div class="itemName"><span style="text-align:right">{{product.restaurantName}}</span></div>
+        		<div class="itemDetails">
+        			<div class="input-group">
+  						<span class="padd glyphicon glyphicon-map-marker"></span>
+	  					<span class="padd">{{product.location}}</span>
+					</div>
+					<div class="input-group">
+  						<span class="padd glyphicon glyphicon-time"></span>
+	  					<span class="padd">{{product.hours}}</span>
+					</div>
+					<div class="input-group">
+  						<span class="padd glyphicon glyphicon-usd"></span>
+	  					<span class="padd">{{product.price}}</span>
+					</div>
+					<div ng-repeat="prod in productList">
+						{{prod.hours}}
+					</div>
+        		</div>
+        	</div>
+        </div>
+        </div>
+

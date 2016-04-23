@@ -4,7 +4,7 @@ import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,14 +12,22 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.twinklexsh.domain.Message;
+
 import com.twinklexsh.domain.RestaurantTable;
 import com.twinklexsh.domain.Result;
-import com.twinklexsh.domain.UserPlan;;
+import com.twinklexsh.domain.UserPlan;
+import com.twinklexsh.domain.Users;
+import com.twinklexsh.repository.UsersRepository;
 
+import javax.inject.Inject;
+
+//@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/api")
 public class ReseverationResource {
+	
+	@Inject
+	UsersRepository userRepository;
 	
 	@RequestMapping(value="/reserve", method=RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<Result> message() {
@@ -66,14 +74,15 @@ public class ReseverationResource {
 		int currentNumber = 296;
 		
 		
-		Result rs = new Result(inNextPerson, currentNumber, requestNumber);
+		//Result rs = new Result(inNextPerson, currentNumber, requestNumber);
 		List<Result> result = new ArrayList<Result>();
-		result.add(rs);
+		//result.add(rs);
 		
-        return result;
+		return null;
+        //return result;
     }
 	
-	@RequestMapping(value="/getPin", method=RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value="/getPin", method=RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Result> returnObj() {
  
 		RestaurantTable rt1 = new RestaurantTable(1, 2, "starbucks");
@@ -118,9 +127,16 @@ public class ReseverationResource {
 		int currentNumber = 296;
 		
 		
-		Result rs = new Result(inNextPerson, currentNumber, requestNumber);
+		//Result rs = new Result(inNextPerson, currentNumber, requestNumber);
 		
-        return ResponseEntity.accepted().body(rs);
+        //return ResponseEntity.accepted().body(rs);
+		return null;
     }
+
+	@RequestMapping(value="/getUsers", method=RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Users> returnUsers() {
+		Users users = userRepository.findByUsername("admin");
+		return ResponseEntity.accepted().body(users);
+	}
 
 }

@@ -1,0 +1,19 @@
+
+@font-face{
+	font-family: 'orbiton';
+	src: url('../fonts/orbitron-v7-latin-regular.ttf') format('truetype');
+	font-weight: 300;
+}
+
+@font-face{
+	font-family: 'raleway';
+	src: url('../fonts/raleway-v10-latin-regular.ttf') format('truetype');
+	font-weight: 300;
+}
+
+@font-face{
+	font-family: 'pacifico';
+	src: url('../fonts/pacifico-v7-latin-regular.ttf') format('truetype');
+	font-weight: 300;
+}
+  

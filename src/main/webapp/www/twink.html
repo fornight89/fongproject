@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!--  meta  -->
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+ 	<meta name="msapplication-tap-highlight" content="no" />
+ 
+    <!-- CSS -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+   <link rel="stylesheet" type="text/css" href="css/font.css" />
+   <link rel="stylesheet" type="text/css" href="css/twink.css" />
+   
+    <!--  JS  -->
+    <!-- <script type="text/javascript" src="cordova.js"></script>  -->
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <script type="text/javascript" src="js/angularJs/angular.min.js"></script>
+    <script type="text/javascript" src="js/angularJs/angular-ui-router.min.js"></script> 
+    <script type="text/javascript" src="js/angularJs/angular-resource.js"></script> 
+    <script type="text/javascript" src="js/angularJs/angular-animation.min.js"></script>
+    <script type="text/javascript" src="js/angularJs/config/app.js"></script>
+    <script type="text/javascript" src="js/angularJs/ui-bootstrap-tpls-0.6.0.js"></script>
+    
+    <!-- directive JS -->
+    <script type="text/javascript" src="js/angularJs/directives/main.directive.js"></script>
+    
+    <!-- controller JS -->
+    <script type="text/javascript" src="js/angularJs/controller/main.controller.js"></script>
+    <script type="text/javascript" src="js/angularJs/controller/admin.controller.js"></script>
+    <script type="text/javascript" src="js/angularJs/controller/product.controller.js"></script>
+    <script type="text/javascript" src="js/angularJs/controller/login.controller.js"></script>
+    <script type="text/javascript" src="js/angularJs/controller/register.controller.js"></script>
+    <script type="text/javascript" src="js/angularJs/controller/a.controller.js"></script>
+    
+    <!-- service JS -->
+    <script type="text/javascript" src="js/angularJs/services/product.service.js"></script>
+    <script type="text/javascript" src="js/angularJs/services/admin.service.js"></script>
+    <script type="text/javascript" src="js/angularJs/services/main.service.js"></script>
+    <script type="text/javascript" src="js/angularJs/services/register.service.js"></script>
+    
+</head>
+
+
+<body ng-app="twinkApp" >
+<div class="container">
+
+    <div  ui-view ></div>
+
+</div>
+
+</body>
+</html>

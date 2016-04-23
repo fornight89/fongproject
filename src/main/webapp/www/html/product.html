@@ -1,0 +1,37 @@
+		<!--  css  -->
+   		<link rel="stylesheet" type="text/css" href="css/produc.css" />
+   				
+   		<div class="background-image"></div>
+		<div class="content" >
+			<div >{{abc.result}}</div>
+        	<div class="productName center-block"><span>{{product.name}}</span></div>
+        	<div class="productShogun center-block"><span>{{product.shogun}}</span></div>
+        	<div ng-if="hideme" class="input-group center-block" style="margin-top:5%" after-request>
+        		<span  class="padd glyphicon glyphicon-send"></span>
+  				<input ng-click="join()" type="button" class="padd classBtnJoin" value="Join us now" >
+			</div>
+			<div ng-if="showme" class="input-group center-block" style="margin-top:5%" before-request>
+        		<span  class="padd glyphicon glyphicon-remove"></span>
+  				<input ng-click="cancel()" type="button" class="padd classBtnJoin" value="Cancel Request">
+			</div>
+			<div class="result" ng-show="showme">
+				<!-- <div class="currentNumber padd"><span class="glyphicon glyphicon-chevron-up fontSize"></span>{{message.currentNumber}}</div>  -->
+				<!-- <div class="inPersonNext padd" ><span class="glyphicon glyphicon-chevron-down fontSize"></span>{{message.userEvents.id}}</div> -->
+				<!-- <div class="personInNext"><span class="fontSize">{{message.msg}}</span></div>	-->
+				<!-- <div class="requestNumber">{{message.inNextPerson}}</div>	-->
+				<div class="wrapperResult">
+					<div class="groupResult"><div class="headerResult">{{message.userRequest.tableSeat}}</div><div class="contentResult">Pax</div></div>
+					<div class="groupResult"><div class="headerResult">{{message.userRequest.smoking}}</div><div class="contentResult">Smoking</div></div>
+					<div class="groupResult"><div class="headerResult">{{message.userRequest.babychair}}</div><div class="contentResult">BabyChair</div></div>
+				</div>
+				<div class="wrapperResult ">
+					<div class="groupResult"><div class="headerResult">{{message.userEvents.id}}</div><div class="contentResult">Reqest Num</div></div>
+					<div class="groupResult"><div class="headerResult">{{message.inNextPerson}}</div><div class="contentResult">Person In Next</div></div>
+					<div class="groupResult"><div class="headerResult">{{message.estimateTime}}</div><div class="contentResult">Est Time (Mins)</div></div>
+				</div>
+				<div class="finalResult">{{message.finalResult}}</div>
+			</div>
+			
+			
+			
+        </div>

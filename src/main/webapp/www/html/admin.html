@@ -1,0 +1,113 @@
+		<!--  css  -->
+		<link rel="stylesheet" type="text/css" href="css/admin.css" />
+		
+		<div class="background-image"></div>
+		<div class="content " >
+		<h1>{{rs.restaurantName}}</h1>
+		<h3>People In Servicing</h3>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th class="col-md-3">Request Number</th>
+					<th class="col-md-2">Status</th>
+					<th class="col-md-1">Pax</th>
+					<th class="col-md-1">No Smoking</th>
+					<th class="col-md-3">Release / Inform</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in userEventsList | filter : { statusTable : 'servicing' } ">
+					<td>{{user.id}}</td>
+					<td>{{user.statusTable}}</td>
+					<td>{{user.restaurantDetails.tableSeat}}</td>
+					<td><span ng-show="!user.restaurantDetails.smoking" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+					<td>
+					<button ng-click="release(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:green; color:white;">
+					  <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>Release
+					</button>
+					
+					<button ng-click="informNoti(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:blue; color:white;">
+					  <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>Notification
+					</button>
+					
+					<button ng-click="informSms(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:blue; color:white;">
+					  <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>SMS
+					</button>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div>Inform All</div>
+		<br/>
+		<h3>People In Waiting</h3>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th class="col-md-3">Request Number</th>
+					<th class="col-md-2">Status</th>
+					<th class="col-md-1">Pax</th>
+					<th class="col-md-1">No Smoking</th>					
+					<th class="col-md-3">Inform</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in userEventsList | filter : { statusTable : 'ready'} ">
+					<td>{{user.id}}</td>
+					<td>{{user.statusTable}}</td>
+					<td>{{user.restaurantDetails.tableSeat}}</td>
+					<td><span ng-show="!user.restaurantDetails.smoking" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+					<td>
+						<button ng-click="serve(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:green; color:white;">
+						  <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>Serve
+						</button>
+					
+						<button ng-click="cancel(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:red; color:white;">
+						  <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>Cancel
+						</button>
+						
+						<button ng-click="informNoti(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:blue; color:white;">
+						  <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> Notification
+						</button>
+						
+						<button ng-click="informSms(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:blue; color:white;">
+						  <span class="glyphicon glyphicon-signal" aria-hidden="true"></span> SMS
+						</button>
+						
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<h3>Booked</h3>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th class="col-md-3">Request Number</th>
+					<th class="col-md-2">Status</th>
+					<th class="col-md-1">Pax</th>
+					<th class="col-md-1">No Smoking</th>					
+					<th class="col-md-3">Inform</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in userEventsList | filter : { statusTable : 'booked'} ">
+					<td>{{user.id}}</td>
+					<td>{{user.statusTable}}</td>
+					<td>{{user.restaurantDetails.tableSeat}}</td>
+					<td><span ng-show="!user.restaurantDetails.smoking" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+					<td>
+						<button ng-click="informNoti(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:blue; color:white;">
+						  <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> Notification
+						</button>
+						
+						<button ng-click="informSms(user.id)" type="button" class="btn btn-default btn-sm" style="background-color:blue; color:white;">
+						  <span class="glyphicon glyphicon-signal" aria-hidden="true"></span> SMS
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>

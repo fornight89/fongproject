@@ -1,36 +1,48 @@
 package com.twinklexsh.domain;
 
-public class Result {
-	int inNextPerson;
-	int currentNumber;
-	int requestNumber;
+import java.io.Serializable;
+
+public class Result implements Serializable{
 	
+	private UserRequest userRequest;
+	private UserEvents userEvents;
+	private int inNextPerson;
+	private Long estimateTime;
 	
-	public Result(int inNextPerson, int currentNumber, int requestNumber) {
-		super();
-		this.inNextPerson = inNextPerson;
-		this.currentNumber = currentNumber;
-		this.requestNumber = requestNumber;
+	public UserRequest getUserRequest() {
+		return userRequest;
 	}
-	
+	public void setUserRequest(UserRequest userRequest) {
+		this.userRequest = userRequest;
+	}
+	public UserEvents getUserEvents() {
+		return userEvents;
+	}
+	public void setUserEvents(UserEvents userEvents) {
+		this.userEvents = userEvents;
+	}
 	public int getInNextPerson() {
 		return inNextPerson;
 	}
 	public void setInNextPerson(int inNextPerson) {
 		this.inNextPerson = inNextPerson;
 	}
-	public int getCurrentNumber() {
-		return currentNumber;
+	public Long getEstimateTime() {
+		return estimateTime;
 	}
-	public void setCurrentNumber(int currentNumber) {
-		this.currentNumber = currentNumber;
+	public void setEstimateTime(Long estimateTime) {
+		this.estimateTime = estimateTime;
 	}
-	public int getRequestNumber() {
-		return requestNumber;
+	
+	public Result(UserRequest userRequest, UserEvents userEvents, int inNextPerson, Long estimateTime) {
+		super();
+		this.userRequest = userRequest;
+		this.userEvents = userEvents;
+		this.inNextPerson = inNextPerson;
+		this.estimateTime = estimateTime;
 	}
-	public void setRequestNumber(int requestNumber) {
-		this.requestNumber = requestNumber;
-	}
+
+	
 	
 	
 }

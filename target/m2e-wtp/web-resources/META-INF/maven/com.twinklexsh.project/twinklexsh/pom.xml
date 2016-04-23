@@ -55,9 +55,42 @@
 				   <groupId>org.springframework.boot</groupId>
 				   <artifactId>spring-boot-starter-web</artifactId>
 				 </dependency>
-        		
-			
-        
+				
+				<dependency>
+				    <groupId>mysql</groupId>
+				    <artifactId>mysql-connector-java</artifactId>
+				  </dependency>
+				  
+				<!--  The 3rd Party Bean used for DataSource Configure -->
+				<dependency>
+				    <groupId>com.zaxxer</groupId>
+				    <artifactId>HikariCP</artifactId>
+				</dependency>
+				 
+				<!-- JPA Provider (Hibernate) -->
+				<dependency>
+				    <groupId>org.hibernate</groupId>
+				    <artifactId>hibernate-entitymanager</artifactId>
+				</dependency>
+				 
+				<!-- Spring Data JPA -->
+				<dependency>
+				    <groupId>org.springframework.data</groupId>
+				    <artifactId>spring-data-jpa</artifactId>
+				</dependency>
+				
+				<dependency>
+			        <groupId>javax.inject</groupId>
+			        <artifactId>javax.inject</artifactId>
+			        <version>1</version>
+			    </dependency>
+			    
+			    <dependency>
+				    <groupId>com.twilio.sdk</groupId>
+				    <artifactId>twilio-java-sdk</artifactId>
+				    <version>3.4.5</version>
+				</dependency>
+ 
   </dependencies>
   
   
@@ -70,7 +103,7 @@
                     <version>2.4</version>
                     <configuration>
                         <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                        <warName>Spring4MVCHelloWorldNoXMLDemo</warName>
+                        <warName>Twinklexsh</warName>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
